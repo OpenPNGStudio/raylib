@@ -732,9 +732,6 @@ int _glfwInitWayland(void)
         return GLFW_FALSE;
     }
 
-    if (_glfw.hints.init.wl.libdecorMode == GLFW_WAYLAND_PREFER_LIBDECOR)
-        _glfw.wl.libdecor.handle = _glfwPlatformLoadModule("libdecor-0.so.0");
-
     if (_glfw.wl.libdecor.handle)
     {
         _glfw.wl.libdecor.libdecor_new_ = (PFN_libdecor_new)
